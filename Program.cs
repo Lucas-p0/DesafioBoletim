@@ -15,6 +15,6 @@ using (HttpClient client = new())
     }
     catch (Exception ex)
     {
-        System.Console.WriteLine($"Deu erro aquiii: {ex.Message}");
+        Console.WriteLine($"Deu erro aquiii: {ex.Message}");
     }
 }

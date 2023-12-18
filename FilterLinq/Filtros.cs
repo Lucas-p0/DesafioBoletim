@@ -7,10 +7,10 @@ public class Filtros
 {
     public static void FiltraAlunosDaEscola(List<Consulta> consulta)
     {
-        var filtraTodosOsAlunos = consulta.OrderBy(consulta => consulta.NomeAluno).Select(consulta => consulta.NomeAluno).Distinct().ToList();
+        var filtraTodosOsAlunos = consulta.OrderBy(consulta => consulta.NomeAluno).Distinct().ToList();
         foreach (var NomeAluno in filtraTodosOsAlunos)
         {
-            System.Console.WriteLine(NomeAluno);
+            Console.WriteLine(NomeAluno);
         }
     }
 }

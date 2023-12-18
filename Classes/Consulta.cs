@@ -5,19 +5,19 @@ namespace DesafioBoletim.Classes;
 public class Consulta
 {
     [JsonPropertyName("Aluno")]
-    public string NomeAluno { get; protected set; }
+    public string? NomeAluno { get; protected set; }
 
 
     [JsonPropertyName("Matéria")]
-    public string NomeMateria { get; protected set; }
+    public string? NomeMateria { get; protected set; }
 
 
     [JsonPropertyName("Professor")]
-    public string NomeProfessor { get; protected set; }
+    public string? NomeProfessor { get; protected set; }
 
 
     [JsonPropertyName("Série")]
-    public string Serie { get; protected set; }
+    public string? Serie { get; protected set; }
 
 
     [JsonPropertyName("Nota")]
@@ -25,15 +25,11 @@ public class Consulta
 
 
     [JsonPropertyName("Telefone")]
-    public string Telefone { get; protected set; }
+    public string? Telefone { get; protected set; }
 
 
     [JsonPropertyName("Sexo")]
-    public string Sexo { get; protected set; }
+    public string? Sexo { get; protected set; }
 
-    internal static object OrderBy(Func<object, object> value)
-    {
-        throw new NotImplementedException();
-    }
 
 }

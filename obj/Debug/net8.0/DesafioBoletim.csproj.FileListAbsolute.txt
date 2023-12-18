@@ -3,3 +3,13 @@ C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.AssemblyInfo
 C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.AssemblyInfo.cs
 C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.csproj.CoreCompileInputs.cache
 C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.sourcelink.json
+C:\Projetos\AutoPlay\DesafioBoletim\bin\Debug\net8.0\DesafioBoletim.exe
+C:\Projetos\AutoPlay\DesafioBoletim\bin\Debug\net8.0\DesafioBoletim.deps.json
+C:\Projetos\AutoPlay\DesafioBoletim\bin\Debug\net8.0\DesafioBoletim.runtimeconfig.json
+C:\Projetos\AutoPlay\DesafioBoletim\bin\Debug\net8.0\DesafioBoletim.dll
+C:\Projetos\AutoPlay\DesafioBoletim\bin\Debug\net8.0\DesafioBoletim.pdb
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.dll
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\refint\DesafioBoletim.dll
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.pdb
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.genruntimeconfig.cache
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\ref\DesafioBoletim.dll
