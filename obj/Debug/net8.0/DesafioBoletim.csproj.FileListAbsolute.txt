@@ -1,0 +1,5 @@
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.AssemblyInfoInputs.cache
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.AssemblyInfo.cs
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.csproj.CoreCompileInputs.cache
+C:\Projetos\AutoPlay\DesafioBoletim\obj\Debug\net8.0\DesafioBoletim.sourcelink.json
