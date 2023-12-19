@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DesafioBoletim")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61997091d4f0be01fe831b37f62ee907ab6cfeef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7eac4670b2e7aac0804c4bc8f881e96d778dced3")]
 [assembly: System.Reflection.AssemblyProductAttribute("DesafioBoletim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DesafioBoletim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

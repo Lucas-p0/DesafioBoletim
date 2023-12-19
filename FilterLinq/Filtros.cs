@@ -42,22 +42,46 @@ public class Filtros
         int quantidadeDeMaterias = filtraQuantidadeDeMaterias.Count();
         System.Console.WriteLine(quantidadeDeMaterias);
     }
-    //4 – Nossa média escolar é 7 pontos.Quantos alunos ficaram de recuperação e quantos alunos passaram de ano?
+    //4 – Nossa média escolar é 7 pontos. Quantos alunos ficaram de recuperação e quantos alunos passaram de ano?
+    //Os alunos que ficaram de recuperação, favor listar o nome e os telefones:
     public static void VerificaAprovados(List<Consulta> consultas)
     {
-        var totaldeAlunos = consultas.Select(c => c.NomeAluno).Distinct().ToList();
-        int quantidadeTotaldeAlunos = totaldeAlunos.Count();
+        var totalDeAlunos = consultas.Select(c => c.NomeAluno).ToList();
+        int quantidadetotalDeAlunos = totalDeAlunos.Count();
+        var totalDeAlunosReprovados = consultas
+                    .Where(consulta => consulta.Nota < 7)
+                    .Select(consulta => new { NomeAluno = consulta.NomeAluno, Telefone = consulta.Telefone }).ToList();
 
-        var totalDeAlunosReprovados = consultas.Where(consulta => consulta.Nota < 7).Select(consulta => consulta.NomeAluno, ).Distinct().ToList();
         int quantidadeDeAlunosReprovados = totalDeAlunosReprovados.Count();
-
-        int totalDeAlunosAprovados = quantidadeTotaldeAlunos - quantidadeDeAlunosReprovados;
-        System.Console.WriteLine($"Quantidade de alunos arovados: {totalDeAlunosAprovados}");
-        foreach (var nomeAluno in filtraTodosOsAlunos)
+        int totalDeAlunosAprovados = quantidadetotalDeAlunos - quantidadeDeAlunosReprovados;
+        Console.WriteLine($"Quantidade de alunos aprovados: {totalDeAlunosAprovados}");
+        foreach (var nomeAluno in totalDeAlunosReprovados)
         {
 
             Console.WriteLine($"{nomeAluno}");
         }
     }
+    // 5 – Nossos alunos são bem inteligentes. Crie uma lista por série e matéria, a nota mais alta de cada turma e disciplina e o nome do aluno. Em caso de mais de uma nota, evidenciar a lista de alunos.
+    public static void ListaMaioresNotasPorNomeESerie(List<Consulta> consultas)
+    {
+        var maiorNota = consultas.Max(consulta => consulta.Nota);
+        var maioresNotas = consultas
+                    .Where(consulta => consulta.Nota >= maiorNota)
+                    .Select(consulta => new { NomeAluno = consulta.NomeAluno, NomeMateria = consulta.NomeMateria, Nota = consulta.Nota });
 
+        foreach (var notas in maioresNotas)
+        {
+
+            Console.WriteLine($"{notas}");
+        }
+    }
+    public static void MediaDeNotaPorSerie(List<Consulta> consultas)
+    {
+        var todasAsMaterias = consultas.Select(c => c.NomeMateria).ToList();
+        todasAsMaterias.Sort();
+        foreach (var materia in todasAsMaterias)
+        {
+            Console.WriteLine(materia);
+        }
+    }
 }

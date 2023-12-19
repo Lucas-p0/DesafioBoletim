@@ -25,11 +25,15 @@ using (HttpClient client = new())
         // Filtros.FiltraQuantidadeDeMaterias(consultas);
 
         // -----------------------Exercicio 4-----------------------
-        Filtros.VerificaAprovados(consultas);
+        // Filtros.VerificaAprovados(consultas);
 
         // -----------------------Exercicio 5-----------------------
 
+        //Filtros.ListaMaioresNotasPorNomeESerie(consultas);
 
+
+        // -----------------------Exercicio 6-----------------------
+        Filtros.MediaDeNotaPorSerie(consultas);
     }
     catch (Exception ex)
     {
