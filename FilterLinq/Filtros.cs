@@ -13,7 +13,7 @@ public class Filtros
 
         var filtraTodosOsAlunos = consultas.Select(c => c.NomeAluno).Distinct().ToList();
         int quantidadeAlunos = filtraTodosOsAlunos.Count();
-        System.Console.WriteLine(quantidadeAlunos);
+        Console.WriteLine(quantidadeAlunos);
 
         // foreach (var nomeAluno in filtraTodosOsAlunos)
         // {
@@ -27,7 +27,7 @@ public class Filtros
     {
         var filtraProfessores = consultas.Select(c => c.NomeProfessor).Distinct().ToList();
         int quantidadeProfessores = filtraProfessores.Count();
-        System.Console.WriteLine(quantidadeProfessores);
+        Console.WriteLine(quantidadeProfessores);
     }
 
     //3 – Quantas turmas e disciplinas existem em nossas escolas?
@@ -35,14 +35,14 @@ public class Filtros
     {
         var filtraQuantidadeDeTumas = consultas.Select(c => c.Serie).Distinct().ToList();
         int quantiadeDeSeries = filtraQuantidadeDeTumas.Count();
-        System.Console.WriteLine(quantiadeDeSeries);
+        Console.WriteLine(quantiadeDeSeries);
     }
     //3 – Quantas turmas e disciplinas existem em nossas escolas?
     public static void FiltraQuantidadeDeMaterias(List<Consulta> consultas)
     {
         var filtraQuantidadeDeMaterias = consultas.Select(c => c.NomeMateria).Distinct().ToList();
         int quantidadeDeMaterias = filtraQuantidadeDeMaterias.Count();
-        System.Console.WriteLine(quantidadeDeMaterias);
+        Console.WriteLine(quantidadeDeMaterias);
     }
     //4 – Nossa média escolar é 7 pontos. Quantos alunos ficaram de recuperação e quantos alunos passaram de ano?
     //Os alunos que ficaram de recuperação, favor listar o nome e os telefones:
@@ -90,14 +90,37 @@ public class Filtros
         foreach (var media in mediaPorSerie)
         {
 
-            System.Console.WriteLine($"{media}");
+            Console.WriteLine($"{media}");
         }
         if (serieComMaiorMedia != null)
         {
-            System.Console.WriteLine($"\nA série com a média mais alta: {serieComMaiorMedia}\n");
+            Console.WriteLine($"\nA série com a média mais alta: {serieComMaiorMedia}\n");
         };
 
     }
+    public static void FiltraAlunosPorGenero(List<Consulta> consulta)
+    {
+        // Agrupando as consultas por série e gênero
+        var consultaPorSerieEGenero = consulta
+                    .GroupBy(consulta => new { consulta.Serie, consulta.Sexo });
+
+
+        var consultasOrdenadas = consultaPorSerieEGenero
+                    .OrderBy(grupo => grupo.Key.Serie)
+                    .ThenBy(grupo => grupo.Key.Sexo);
+
+
+        foreach (var grupo in consultasOrdenadas)
+        {
+            Console.WriteLine($"No Série {grupo.Key.Serie}, Gênero {grupo.Key.Sexo}");
+            // foreach (var consultaGrupo in grupo)
+            // {
+            //     Console.WriteLine($"  Aluno: {NomeAluno}, Nota: {consulta.Nota}");
+            // }
+        }
+
+    }
+
 
     //var filmesMelhorAvaliados = filmes.OrderByDescending(f => f.Avaliacao).Take(5);
 }

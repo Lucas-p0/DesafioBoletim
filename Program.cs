@@ -33,11 +33,11 @@ using (HttpClient client = new())
 
 
         // -----------------------Exercicio 6-----------------------
-        Filtros.MediaDeNotaPorSerie(consultas);
+        // Filtros.MediaDeNotaPorSerie(consultas);
 
 
         // -----------------------Exercicio 7-----------------------
-
+        Filtros.FiltraAlunosPorGenero(consultas);
 
 
     }
