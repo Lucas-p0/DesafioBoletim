@@ -1,6 +1,7 @@
 using System.Runtime.InteropServices.Marshalling;
 using DesafioBoletim.Classes;
 using System.Linq;
+using Microsoft.VisualBasic;
 
 namespace DesafioBoletim.FilterLinq;
 
@@ -83,9 +84,13 @@ public class Filtros
             Serie = grupo.Key,
             Media = grupo.Average(consulta => consulta.Nota)
         });
+
         foreach (var media in mediaPorSerie)
         {
+
             System.Console.WriteLine($"{media}");
         }
     }
+
+    //var filmesMelhorAvaliados = filmes.OrderByDescending(f => f.Avaliacao).Take(5);
 }
