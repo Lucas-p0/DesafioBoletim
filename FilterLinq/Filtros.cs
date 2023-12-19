@@ -2,6 +2,7 @@ using System.Runtime.InteropServices.Marshalling;
 using DesafioBoletim.Classes;
 using System.Linq;
 using Microsoft.VisualBasic;
+using System.Globalization;
 
 namespace DesafioBoletim.FilterLinq;
 
@@ -82,7 +83,7 @@ public class Filtros
         var mediaPorSerie = consultaPorSerie.Select(grupo => new
         {
             Serie = grupo.Key,
-            Media = grupo.Average(consulta => consulta.Nota)
+            Media = grupo.Average(consulta => consulta.Nota).ToString("F2", CultureInfo.InvariantCulture)
         });
 
         foreach (var media in mediaPorSerie)
