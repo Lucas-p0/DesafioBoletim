@@ -85,12 +85,19 @@ public class Filtros
             Serie = grupo.Key,
             Media = grupo.Average(consulta => consulta.Nota).ToString("F2", CultureInfo.InvariantCulture)
         });
+        var mediaSerie = consultas.OrderByDescending(c => c.Nota).First();
 
-        foreach (var media in mediaPorSerie)
-        {
+        System.Console.WriteLine($"Turma com maior nota: {mediaSerie}");
+        // foreach (var media1 in mediaSerie)
+        // {
+        // }
 
-            System.Console.WriteLine($"{media}");
-        }
+        // foreach (var media in mediaPorSerie)
+        // {
+
+        //     System.Console.WriteLine($"{media}");
+        // }
+
     }
 
     //var filmesMelhorAvaliados = filmes.OrderByDescending(f => f.Avaliacao).Take(5);
