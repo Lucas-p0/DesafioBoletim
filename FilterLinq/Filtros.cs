@@ -77,11 +77,15 @@ public class Filtros
     }
     public static void MediaDeNotaPorSerie(List<Consulta> consultas)
     {
-        var todasAsMaterias = consultas.Select(c => c.NomeMateria).ToList();
-        todasAsMaterias.Sort();
-        foreach (var materia in todasAsMaterias)
+        var consultaPorSerie = consultas.GroupBy(consulta => consulta.Serie);
+        var mediaPorSerie = consultaPorSerie.Select(grupo => new
         {
-            Console.WriteLine(materia);
+            Serie = grupo.Key,
+            Media = grupo.Average(consulta => consulta.Nota)
+        });
+        foreach (var media in mediaPorSerie)
+        {
+            System.Console.WriteLine($"{media}");
         }
     }
 }

@@ -34,6 +34,9 @@ using (HttpClient client = new())
 
         // -----------------------Exercicio 6-----------------------
         Filtros.MediaDeNotaPorSerie(consultas);
+
+
+        
     }
     catch (Exception ex)
     {
