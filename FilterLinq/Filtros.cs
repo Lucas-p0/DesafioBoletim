@@ -5,12 +5,12 @@ namespace DesafioBoletim.FilterLinq;
 
 public class Filtros
 {
-    public static void FiltraAlunosDaEscola(List<Consulta> consulta)
+    public static void FiltraAlunosDaEscola(List<Consulta> consultas)
     {
-        var filtraTodosOsAlunos = consulta.OrderBy(consulta => consulta.NomeAluno).Distinct().ToList();
-        foreach (var NomeAluno in filtraTodosOsAlunos)
+        var filtraTodosOsAlunos = consultas.OrderBy(consulta => consulta.NomeAluno).Where(NomeAluno).Distinct().ToList();
+        foreach (var nome in filtraTodosOsAlunos)
         {
-            Console.WriteLine(NomeAluno);
+            Console.WriteLine($"{nome}");
         }
     }
 }
