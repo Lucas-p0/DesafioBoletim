@@ -9,8 +9,26 @@ using (HttpClient client = new())
     try
     {
         string response = await client.GetStringAsync(URL_API);
-        var resultadoExcel = JsonSerializer.Deserialize<List<Consulta>>(response);
-        Filtros.FiltraAlunosDaEscola(resultadoExcel);
+        var consultas = JsonSerializer.Deserialize<List<Consulta>>(response);
+        // -----------------------Exercicio 1-----------------------
+        //Filtros.FiltraAlunosDaEscola(consultas);
+
+        // -----------------------Exercicio 2-----------------------
+        //Filtros.FiltraProfessores(consultas);
+
+
+        // -----------------------Exercicio 3-----------------------
+        //Filtros.FiltraQuantidadeTurmas(consultas);
+
+
+        // -----------------------Exercicio 3-----------------------
+        // Filtros.FiltraQuantidadeDeMaterias(consultas);
+
+        // -----------------------Exercicio 4-----------------------
+        Filtros.VerificaAprovados(consultas);
+
+        // -----------------------Exercicio 5-----------------------
+
 
     }
     catch (Exception ex)

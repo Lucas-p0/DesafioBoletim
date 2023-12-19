@@ -5,31 +5,31 @@ namespace DesafioBoletim.Classes;
 public class Consulta
 {
     [JsonPropertyName("Aluno")]
-    public string? NomeAluno { get; protected set; }
+    public string? NomeAluno { get; set; }
 
 
     [JsonPropertyName("Matéria")]
-    public string? NomeMateria { get; protected set; }
+    public string? NomeMateria { get; set; }
 
 
     [JsonPropertyName("Professor")]
-    public string? NomeProfessor { get; protected set; }
+    public string? NomeProfessor { get; set; }
 
 
     [JsonPropertyName("Série")]
-    public string? Serie { get; protected set; }
+    public string? Serie { get; set; }
 
 
     [JsonPropertyName("Nota")]
-    public double Nota { get; protected set; }
+    public double Nota { get; set; }
 
 
     [JsonPropertyName("Telefone")]
-    public string? Telefone { get; protected set; }
+    public string? Telefone { get; set; }
 
 
     [JsonPropertyName("Sexo")]
-    public string? Sexo { get; protected set; }
+    public string? Sexo { get; set; }
 
 
 }
