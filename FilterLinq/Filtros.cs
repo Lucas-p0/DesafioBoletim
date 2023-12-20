@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices.Marshalling;
 using DesafioBoletim.Classes;
 using System.Linq;
-using Microsoft.VisualBasic;
+
 using System.Globalization;
 
 namespace DesafioBoletim.FilterLinq;
