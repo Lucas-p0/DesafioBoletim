@@ -102,15 +102,18 @@ public class Filtros
     {
         // Agrupando as consultas por série e gênero
         var consultaPorSerieEGenero = consulta
-                    .GroupBy(consulta => new { consulta.Serie, consulta.Sexo });
+                    .GroupBy(consulta => new { consulta.Serie, consulta.Sexo, consulta.Nota });
 
-
+        // Nota mais alta
+        var notaMaisAlta = consulta.Max(consulta => consulta.Nota);
         var consultasOrdenadas = consultaPorSerieEGenero
                     .OrderBy(grupo => grupo.Key.Serie)
                     .ThenBy(grupo => grupo.Key.Sexo);
 
+        var maiorNota = consultasOrdenadas.OrderBy(grupo => grupo.Key.Sexo);
 
-        foreach (var grupo in consultasOrdenadas)
+
+        foreach (var grupo in maiorNota)
         {
             Console.WriteLine($"No Série {grupo.Key.Serie}, Gênero {grupo.Key.Sexo}");
             // foreach (var consultaGrupo in grupo)
